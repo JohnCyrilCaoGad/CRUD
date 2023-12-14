@@ -1,8 +1,22 @@
 *{
     margin: 0px;
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
+    font-size: 10px;
+    font-family: 'Magical Childhood';
+
 }
+
+@font-face {
+    font-family: 'Magical Childhood';
+    src: url('Magical Childhood.ttf');
+}
+
+hmtl{
+    width: 100%;
+}
+
 body{
+    width: 100%;
     padding-top: 100px;
 }
 .flex-row{
@@ -30,7 +44,7 @@ body{
 }
 
 form.insert{
-    width: auto;
+    width: 20%;
 }
 
 table.list{
@@ -38,11 +52,11 @@ table.list{
 }
 
 table.list2{
-    width: 70%;
+    width: 80%;
 }
 
 p.search-result{
-    width: auto;
+    width: 80%;
 }
 
 form p{
@@ -67,7 +81,7 @@ a.delete{
 }
 
 td{
-    padding: 10px;
+    padding: 4px;
     text-align: center;
 }
 
@@ -97,5 +111,11 @@ textarea{
 }
 
 table{
+    width: 100%;
     margin: 10px 0px; 
+}
+
+div.scroll{
+    overflow: scroll;
+    height: 100%;
 }

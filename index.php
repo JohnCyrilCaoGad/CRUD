@@ -65,7 +65,7 @@
         <title>INSERT</title>
     </head>
     <body>
-        <div class="flex-row center-child start-child around-child">
+        <div class="flex-row center-child start-child around-child" style="width: 100%; height: 690px">
             <div class="flex-col insert">
             <form class="flex-col" action="index.php" method="POST" name="searchform">
                 <div class="flex-row">
@@ -91,45 +91,41 @@
             </form>
             </div>
 
-            <div class="flex-col list2">
-                <div class="flex-col search-result">
-                    <p class="center-self"><?php echo $found_status?></p>
-                    <div style="justify-content: space-around;">
-                        <?php
-                            if ($found_status === "Entry Found!") {
-                                echo "<table border='1' class='list'>";
-                                echo "<tr>
-                                        <td>ID</td>
-                                        <td>First&nbspName</td>
-                                        <td>Last&nbspName</td>
-                                        <td>Birthday</td>
-                                        <td>Gender</td>
-                                        <td>Address</td>
-                                        <td>Email</td>
-                                        <td>Contact</td>
-                                        <td width='150px'>Action</td>
-                                      </tr>";
-                                echo "<tr>
-                                        <td>{$s_id}</td>
-                                        <td>{$s_fname}</td>
-                                        <td>{$s_lname}</td>
-                                        <td>{$s_birthday}</td>
-                                        <td>{$s_gender}</td>
-                                        <td>{$s_address}</td>
-                                        <td>{$s_email}</td>
-                                        <td>{$s_contact}</td>
-                                        <td>
-                                        <div class='flex-row around-child'>
-                                        <a class='update' href='update.php?id=$s_id'>Update</a>
-                                        <a class='delete' href='delete.php?id=$s_id'>Delete</a>
-                                        </div>
-                                        </td>
-                                      </tr>";
-                                echo "</table>";
-                            }
-                        ?>
-                    </div>
-                </div>
+            <div class="flex-col list2 scroll">
+            <p class="center-self"><?php echo $found_status?></p>
+                <?php
+                    if ($found_status === "Entry Found!") {
+                        echo "<table border='1' class='list'>";
+                        echo "<tr>
+                                <td>ID</td>
+                                <td>First&nbspName</td>
+                                <td>Last&nbspName</td>
+                                <td>Birthday</td>
+                                <td>Gender</td>
+                                <td>Address</td>
+                                <td>Email</td>
+                                <td>Contact</td>
+                                <td width='150px'>Action</td>
+                                </tr>";
+                        echo "<tr>
+                                <td>{$s_id}</td>
+                                <td>{$s_fname}</td>
+                                <td>{$s_lname}</td>
+                                <td>{$s_birthday}</td>
+                                <td>{$s_gender}</td>
+                                <td>{$s_address}</td>
+                                <td>{$s_email}</td>
+                                <td>{$s_contact}</td>
+                                <td>
+                                <div class='flex-row around-child'>
+                                <a class='update' href='update.php?id=$s_id'>Update</a>
+                                <a class='delete' href='delete.php?id=$s_id'>Delete</a>
+                                </div>
+                                </td>
+                                </tr>";
+                        echo "</table>";
+                    }
+                ?>
                 <?php
                     echo "<table border ='1' class='list'>";
                     echo "<tr>

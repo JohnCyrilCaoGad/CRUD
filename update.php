@@ -27,7 +27,7 @@
 <body>
     <div class="flex-col center-child">
         <h1>UPDATE</h1>
-        <form class="update" style="width: 50%;" method="post" action="update_record.php">
+        <form class="update" style="width: 30%;" method="post" action="update_record.php">
             <input type="hidden" name="user_id" value="<?php echo $s_id; ?>">
             <input type="text" name="new_fname" value="<?php echo $s_fname; ?>"><br>
             <input type="text" name="new_lname" value="<?php echo $s_lname; ?>"><br>
